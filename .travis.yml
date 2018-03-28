@@ -4,12 +4,12 @@ python:
 before_install:
   - sudo apt-get install python-dev
 install:
-  - pip install molecule
+  - pip install ansible
+  - pip install yamllint
 before_script:
 script:
-  - molecule lint -s openstack-unict
-  - molecule dependency -s openstack-unict
-  - molecule syntax -s openstack-unict
+  - find . -name "*.yml" -exec yamllint {} \;
+  - ansible-lint
 after_success:
 after_failure:
 after_script:
