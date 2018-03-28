@@ -1,0 +1,34 @@
+---
+# Ansible playbook to deploy and maintain the EGI community forum
+- hosts: forum
+  name: Provide certs
+  tasks:
+    - name: Ensure SSL location is present
+      file:
+        path: "{{ cert_location }}"
+        state: directory
+        owner: root
+        group: root
+    - name: Copy Cert Chain
+      copy:
+        src: etc/ssl/community_egi_eu.crt
+        dest: "{{ cert_location }}/server.crt"
+        owner: root
+        group: root
+        mode: u=rw,g=r
+    - name: Copy cert key
+      copy:
+        src: etc/ssl/community_egi_eu.key
+        dest: "{{ cert_location }}/server.key"
+        owner: root
+        group: root
+        mode: u=r
+  - name: sort out firewall
+    debug:
+      msg: "TODO"
+
+- hosts: forum
+  name: Deploy !
+  pre_tasks:
+  roles:
+    - {role: AAROC.discourse-sso, launch: 'False'}
