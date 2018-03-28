@@ -9,7 +9,6 @@ install:
 before_script:
 script:
   - find . -name "*.yml" -exec yamllint {} \;
-  - ansible-lint
 after_success:
 after_failure:
 after_script:
