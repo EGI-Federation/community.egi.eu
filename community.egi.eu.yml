@@ -23,6 +23,9 @@
         owner: root
         group: root
         mode: u=r
+  - name: sort out firewall
+    debug:
+      msg: "TODO"
 
 - hosts: forum
   name: Deploy !
