@@ -2,10 +2,14 @@
 # Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
 cert_location: /etc/ssl/certs/
 nginx_sites:
- default:
+  http:
+    -  listen      80 default
+    - server_name community.egi.eu
+## redirect http to https ##
+    - return      301 https://$server_name$request_uri
+  https:
      - listen 443 
      - listen [::]:443
-     - return 301 https://$host$request_uri
      - ssl on
      - ssl_certificate    /etc/ssl/certs/server.crt
      - ssl_certificate_key    /etc/ssl/certs/server.key
