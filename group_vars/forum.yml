@@ -1,6 +1,6 @@
 ---
 ## NGINX stuff
-  # Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
+# Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
 cert_location: /etc/ssl/certs/
 nginx_sites:
   http:
