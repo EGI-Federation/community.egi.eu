@@ -1,0 +1,14 @@
+language: python
+python:
+  - '2.7'
+before_install:
+  - sudo apt-get install python-dev
+install:
+  - pip install ansible
+  - pip install yamllint
+before_script:
+script:
+  - find . -name "*.yml" -exec yamllint {} \;
+after_success:
+after_failure:
+after_script:
