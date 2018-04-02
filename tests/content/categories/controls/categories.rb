@@ -13,7 +13,8 @@ control 'category list' do
         its('body') { should be }
         its('body') { should include 'category_list'}
         data['categories'].each do |category|
-            its('body') { should include category }
+            its('body') { should include category['name'] }
+            its('body') { should include category['slug']}
         end
     end
 end

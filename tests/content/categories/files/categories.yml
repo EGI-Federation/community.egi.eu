@@ -1,5 +1,9 @@
 ---
-categories:
-  - 'Cloud Compute'
-  - 'Cloud Container Compute'
-  - 'High-Throughput Compute'
+categories: 
+# These should also somehow reflect the hierarchy of the categories.
+  - name: 'AAI'
+    slug: 'aai'
+  - name: 'EGI Operations'
+    slug: 'egi-ops'
+  - name: 'EGI Services'
+    slug: 'egi-services'
