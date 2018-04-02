@@ -3,7 +3,7 @@ python:
 - '2.7'
 before_install:
 - sudo apt-get install python-dev
-- sudp apt-get install ruby ruby-dev
+- sudo apt-get install ruby ruby-dev
 install:
 - pip install ansible
 - pip install yamllint
