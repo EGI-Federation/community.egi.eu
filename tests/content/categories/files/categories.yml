@@ -1,0 +1,8 @@
+---
+categories:
+  - name: 'Cloud Compute'
+    slug: 'egi-cloud-compute'
+  - name: 'Cloud Container Compute'
+    slug: 'egi-container'
+  - name: 'High-Throughput Compute'
+    slug: 'egi-htc'

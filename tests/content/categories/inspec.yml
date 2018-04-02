@@ -1,0 +1,11 @@
+---
+name: categories
+title: Category profile for EGI community forum
+maintainer: EGI Operations
+copyright: EGI Operations
+copyright_email: bruce.becker@egi.eu
+license:  Apache-2.0
+summary: An Inspect profile for the discussion forum categories
+version: 0.1.0
+supports:
+  - os-family: linux
