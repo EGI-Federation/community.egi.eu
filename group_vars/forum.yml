@@ -1,4 +1,5 @@
 ---
+## NGINX stuff
 # Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
 cert_location: /etc/ssl/certs/
 nginx_sites:
@@ -27,3 +28,29 @@ nginx_sites:
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
                 proxy_set_header X-Forwarded-Proto $scheme; 
                 }
+# Discourse stuff
+#discourse_hostname:
+developer_emails: 'brucellino@gmail.com'
+smtp_address: smtp-relay.gmail.com
+# smtp username should be empty for the un-authenticated relay
+smtp_username: ""
+smtp_port: 587
+discourse_plugins:
+  - name: Discourse Data Explorer
+    description: Allows better querying of Discourse database
+    url: https://github.com/discourse/discourse-data-explorer.git
+  - name: "Discourse Solved ✔"
+    description: "Allows you to mark posts as solutions"
+    url: https://github.com/discourse/discourse-solved.git
+  - name: Slack plugin
+    description: "Discourse to slack plugin"
+    url: https://github.com/bernd/discourse-slack-plugin.git
+  - name: Checklist
+    description: "For when you need to render checklists"
+    url: https://github.com/cpradio/discourse-plugin-checklist
+  - name: Spreadsheet
+    description: "Import google docs spreadsheets to preview them."
+    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
+  - name: OAuth2 provider
+    description: "Enable OAuth2 identity provider configuration"
+    url: https://github.com/discourse/discourse-oauth2-basic
