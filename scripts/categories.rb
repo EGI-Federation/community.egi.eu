@@ -5,17 +5,17 @@ require 'json'
 require 'yaml'
 
 # path to where the json seeds are
-seeds_path = '../files/forum_data/categories/'
-client = DiscourseApi::Client.new('https://community.egi.eu')
+seeds_path = '../files/forum-data/categories/'
+forum_client = DiscourseApi::Client.new('https://community.egi.eu')
 secrets = YAML.load_file('../files/secrets.yml')
 # seed_categories = JSON.parse(File.read('../files/forum-data/categories/categories.json'))
-client.api_key = secrets['api_key']
-client.api_username = 'brucellino'
+forum_client.api_key = secrets['api_key']
+forum_client.api_username = 'brucellino'
 # Create an array that will hold the parent category ids
 parent_categories = []
 
 # Get all the categories - an array of hashes
-categories = client.categories
+categories = forum_client.categories
 categories.each do |category|
     if category['has_children']
         parent_categories.push(category['id'])
@@ -25,5 +25,26 @@ categories.each do |category|
 end
 
 # Get the seeds
-seed_files = Dir.glob("#{seeds_path}/*.json")
-ap seed_files
+Dir.glob("#{seeds_path}/*.yml").each do |file|
+    new_category = YAML.load_file(file)
+    new_category.each do |category|
+        print category['name'] + "\n"
+        args = {
+                        name: category['name'], 
+                        color: category['color'],
+                        text_color: category['text_color'],
+                        description: category['description'],
+                        # permissions: category['permissions'],
+                        slug: category['slug'],
+                        parent_category_id: category['parent_category_id']
+        }
+        begin
+            forum_client.create_category(args)
+        rescue => exception
+            puts "Exception #{exception}"
+        else
+            puts "added a category"
+        end
+    end
+end
+
