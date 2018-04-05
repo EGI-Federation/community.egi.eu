@@ -1,0 +1,112 @@
+---
+# Add the EGI services here 
+# See https://www.egi.eu/services/
+- name: "Cloud Container Compute"
+  color: BF1E2E
+  text_color: FFFFFF
+  slug: "egi-cloud-container"
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  description: |
+    "Run Docker containers in a lightweight virtualised environment"
+  parent_category_id: 7
+
+- name: "Cloud Compute"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-cloud
+  description: |
+    "Cloud Compute gives you the ability to deploy and scale virtual machines on-demand."
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "High-Throughput Compute"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-htc
+  description: |
+    "Execute thousands of computational tasks to analyse large datasets"
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "Online Storage"
+  description: |
+    "Store, share and access your files and their metadata on a global scale"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-online-data
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "Archive Storage"
+  description: |
+    "Back-up your data for the long term and future use in a secure environment"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-archive-data
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+  
+- name: "Data Transfer"
+  description: |
+    "Transfer large sets of data from one place to another"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-transfer-data
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "CheckIn"
+  description: |
+    "Login with your own credentials"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-checkin
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "FitSM Training"
+  description: |
+    "Learn how to manage IT services with a pragmatic and lightweight standard"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-fitsm
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "Training Infrastructure"
+  description: |
+    "Dedicated computing and storage for training and education"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-tinfra
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
+
+- name: "Applications on Demand"
+  description: |
+    "Use online applications for your data & compute intensive research"
+  color: BF1E2E
+  text_color: FFFFF
+  slug: egi-tinfra
+  permissions:
+    - name: "trust_level_0"
+      permission_type: 1
+  parent_category_id: 7
