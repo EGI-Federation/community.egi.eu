@@ -5,6 +5,6 @@ gem 'inspec'
 gem 'json'
 
 group :test do
-    gem 'rspec'
-    gem 'rubocop'
+  gem 'rspec'
+  gem 'rubocop'
 end
