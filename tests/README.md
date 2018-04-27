@@ -26,11 +26,9 @@ We break up the tests into a few profiles
 
 We use the [Dev-Sec SSH baseline profile](https://github.com/dev-sec/ssh-baseline) for testing ssh configuration: 
 
+```bash
+inspec exec -t ssh://<username>@<forum_hostname> https://github.com/dev-sec/ssh-baseline
 ```
-inspec exec https://github.com/dev-sec/ssh-baseline
-```
-
-
 
 ### NGINX Hardening
 
