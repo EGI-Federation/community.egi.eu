@@ -19,3 +19,7 @@ If you are the maintainer of the service, you need to run the playbook with the 
 
 If all that is ok, run the playbook, or get your favourite CI tool to do it : 
 `ansible-playook -i inventory community.egi.eu.yml`
+
+## Testing
+
+The [tests](tests/README.md) directory contains the tests that we expect the service, server and machine to pass.
