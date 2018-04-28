@@ -1,7 +1,14 @@
 ---
 # Ansible playbook to deploy and maintain the EGI community forum
 - hosts: forum
+  name: harden ssh
+  roles:
+    - {role: dev-sec.ssh-hardening, tags: ssh}
+
+- hosts: forum
   name: Provide certs
+  tags:
+    - ssl
   tasks:
     - name: Ensure SSL location is present
       file:
@@ -29,6 +36,7 @@
 
 - hosts: forum
   name: Deploy !
-  pre_tasks:
+  tags:
+    - discourse
   roles:
     - {role: AAROC.discourse-sso, launch: 'False'}

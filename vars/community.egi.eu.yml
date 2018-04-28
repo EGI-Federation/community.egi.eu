@@ -143,7 +143,7 @@ ssh_challengeresponseauthentication: false
 ssh_server_revoked_keys: []
 
 ## NGINX stuff
-# Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
+  # Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
 cert_location: /etc/ssl/certs/
 nginx_sites:
   http:
@@ -178,6 +178,14 @@ smtp_address: smtp-relay.gmail.com
 # smtp username should be empty for the un-authenticated relay
 smtp_username: ""
 smtp_port: 587
+discourse_templates:
+  - postgres
+  - redis
+  - web
+  - sshd
+  - web.ratelimited
+  - web.socketed
+
 discourse_plugins:
   - name: Discourse Data Explorer
     description: Allows better querying of Discourse database
@@ -191,9 +199,6 @@ discourse_plugins:
   - name: Checklist
     description: "For when you need to render checklists"
     url: https://github.com/cpradio/discourse-plugin-checklist
-  - name: Spreadsheet
-    description: "Import google docs spreadsheets to preview them."
-    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
   - name: OAuth2 provider
     description: "Enable OAuth2 identity provider configuration"
     url: https://github.com/discourse/discourse-oauth2-basic
