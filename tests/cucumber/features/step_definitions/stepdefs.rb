@@ -1,4 +1,5 @@
 require "watir"
+require 'watir-performance'
 require "rspec/expectations"
 require 'cucumber/rspec/doubles'
 
@@ -10,6 +11,8 @@ end
 Given('I am on the main page') do
   @browser = Watir::Browser.new :firefox
   @browser.goto 'https://community.egi.eu'
+  load_secs = @browser.performance.summary[:response_time] / 1000
+  expect(load_secs).to < 300
 end
 
 Given("I visit the main page") do
@@ -32,7 +35,7 @@ Given("I click on the login button") do
 end
 
 Then("I am taken to EGI AAI") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @browser.window.title(/identity provider/i).use
 end
 
 Then("I choose SSO") do

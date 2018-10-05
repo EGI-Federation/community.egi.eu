@@ -10,3 +10,5 @@ group :test do
   gem 'cucumber', '~> 3.1.0'
   gem 'watir'
 end
+
+gem "watir-performance", "~> 0.6.3"
