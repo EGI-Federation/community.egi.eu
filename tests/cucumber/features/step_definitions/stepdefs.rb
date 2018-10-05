@@ -12,3 +12,7 @@ end
 Then(/it is present/) do
   @login_button.exists?
 end
+
+After do
+  @browser.close
+end
