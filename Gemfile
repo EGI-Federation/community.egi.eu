@@ -8,4 +8,5 @@ group :test do
   gem 'rspec'
   gem 'rubocop'
   gem 'cucumber', '~> 3.1.0'
+  gem 'watir'
 end
