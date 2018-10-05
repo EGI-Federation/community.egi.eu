@@ -197,3 +197,6 @@ discourse_plugins:
   - name: OAuth2 provider
     description: "Enable OAuth2 identity provider configuration"
     url: https://github.com/discourse/discourse-oauth2-basic
+  - name: Chatroom integration
+    description: "Updates to slack and post transcript to discourse"
+    url: https://github.com/discourse/discourse-chat-integration.git

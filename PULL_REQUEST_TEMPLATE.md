@@ -17,8 +17,5 @@ of contributors or authors, please mark the PR as
 **Related issue :**
 
 **Consider author for inclusion**:
-  - [ ] author list
-  - [ ] contributor list
-
-
-
+- [ ] author list
+- [ ] contributor list
