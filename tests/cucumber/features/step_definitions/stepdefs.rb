@@ -4,7 +4,7 @@ require "rspec/expectations"
 require 'cucumber/rspec/doubles'
 require 'json'
 
-Watir.default_timeout = 60
+Watir.default_timeout = 10
 
 Given('I am a test user') do
   @username = ENV['USER_NAME']
@@ -42,7 +42,12 @@ Then("I am taken to EGI AAI") do
 end
 
 Then("I choose SSO") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @browser.text_field(placeholder: /Search/).wait_until(&:present?)
+  @browser.div(id: 'loader').wait_while(&:present?)
+  @browser.text_field(placeholder: /Search/).set 'EGI SSO'
+  @egi_sso = @browser.link(text: 'EGI SSO', style: /display: block;/).wait_until_present
+  expect(@egi_sso).to be_present
+  @egi_sso.click
 end
 
 Then("I add my credentials") do
