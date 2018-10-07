@@ -67,12 +67,40 @@ end
 Then('I am asked to release my attributes') do
   @browser.window(title: 'Information Release').use
   expect(@browser.span(class: 'service_name')).to exist
-  expect(@browser.span(class: 'service_name').text).to
-  match(/EGI AAI Service Provider Proxy/)
+  expect(@browser.span(class: 'service_name').text)
+  .to match(/EGI AAI Service Provider Proxy/)
+
+  expect(@browser.span(class: 'service_description')).to exist
+  expect(@browser.span(class: 'service_description').text)
+  .to match(/Service provider proxy for all federated EGI services/)
+
+  # give consent to the proxy one time
+  @browser.radio(value: '_shib_idp_doNotRememberConsent').set
+  @browser.button(name: '_eventId_proceed', value: 'Accept').click
+
+  
+  @browser.window(title: /consent/i).use
+  # say yes to give consent
+  @browser.button(text: /yes/i).click
+
+  # if you're a new user to CheckIn, you will get taken to
+  # https://aai.egi.eu/registry/co_petitions/start
+  # there is a whole flow here which needs to be taken care of independently.
+
+  # Steps
+  # 1) Accept to sign up
+  # 2) read terms and conditions, then accept
+  # 3) sign up
+  # 4) get email to click on https://aai.egi.eu/registry/co_invites/reply/<big_hash>
+  # 5) confirm : https://aai.egi.eu/registry/co_invites/authconfirm/<big_hash>
+
+  
 end
 
 Then('I am taken back to the main forum') do
-  pending # Write code here that turns the phrase above into concrete actions
+  '''
+  The user should see a modal withe the attributes released by CheckIn
+  '''
 end
 
 Then('I can see my profile information') do
