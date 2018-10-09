@@ -94,19 +94,23 @@ Then('I am asked to release my attributes') do
   # 4) get email to click on https://aai.egi.eu/registry/co_invites/reply/<big_hash>
   # 5) confirm : https://aai.egi.eu/registry/co_invites/authconfirm/<big_hash>
 
-  
 end
 
 Then('I am taken back to the main forum') do
-  '''
-  The user should see a modal withe the attributes released by CheckIn
-  '''
+  @browser.window(title: 'EGI Foundation').use
+  expect(@browser.url).to match(/community\.egi\.eu/)
+  # check for modal
+  expect(@browser.div(id: 'discourse-modal')).to exist
 end
 
-Then('I can see my profile information') do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I can see my profile information") do
+  # check for login fields
+  # expect(@browser.div(class: 'login-form')).to exist
+  expect(@browser.text_field(id: 'new-account-email').value).to eq('test@community.egi.eu')
+  expect(@browser.text_field(id: 'new-account-username').value).to eq('Dr_Test_Robot')
+  expect(@browser.text_field(id: 'new-account-name').value).to eq('Dr Test Robot')
 end
 
-# After do
-#   @browser.close
-# end
+After do
+  @browser.close
+end
