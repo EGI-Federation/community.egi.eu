@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get install ruby ruby-dev
   - gem -v
 install:
-  - pip install ansible
+  # - pip install ansible
   - pip install yamllint
   - bundle
 before_script: 

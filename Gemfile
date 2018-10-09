@@ -11,6 +11,4 @@ group :test do
   gem 'watir'
 end
 
-gem "watir-performance", "~> 0.6.3"
-
 gem "selenium-webdriver", "~> 3.14"
