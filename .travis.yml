@@ -1,18 +1,20 @@
+---
 language: python
 python:
-- '2.7'
+  - '2.7'
 before_install:
-- sudo apt-get install python-dev
-- sudo apt-get install ruby ruby-dev
+  - sudo apt-get install python-dev
+  - sudo apt-get install ruby ruby-dev
+  - gem -v
 install:
-- pip install ansible
-- pip install yamllint
-- bundle
+  - pip install ansible
+  - pip install yamllint
+  - bundle
 before_script: 
 script:
-- find . -name "*.yml" -exec yamllint {} \;
-- cd tests/content
-- inspec exec categories
+  - find . -name "*.yml" -exec yamllint {} \;
+  - cd tests/content
+  - inspec exec categories
 after_success: 
 after_failure: 
 after_script: 
