@@ -5,7 +5,7 @@ python:
 before_install:
   - sudo apt-get install python-dev
   - sudo apt-get install ruby ruby-dev
-  - gem -v
+  - gem update --system
 install:
   # - pip install ansible
   - pip install yamllint
