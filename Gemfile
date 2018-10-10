@@ -5,12 +5,9 @@ gem 'inspec'
 gem 'json'
 
 group :test do
+  gem 'cucumber', '~> 3.1.0'
   gem 'rspec'
   gem 'rubocop'
-  gem 'cucumber', '~> 3.1.0'
+  gem 'selenium-webdriver', '~> 3.14'
   gem 'watir'
 end
-
-gem "watir-performance", "~> 0.6.3"
-
-gem "selenium-webdriver", "~> 3.14"
