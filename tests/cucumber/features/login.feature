@@ -1,4 +1,4 @@
-Feature: Log in with CheckIn A person with an identity can log in with CheckIn
+Feature: Log in with Check-In A person with an identity can log in with CheckIn
   Background: I start on the home page
     Given I am a test user 
     And I am on the main page
@@ -10,7 +10,7 @@ Feature: Log in with CheckIn A person with an identity can log in with CheckIn
 
   Scenario: A test user visits the forum to log in
     Given I click on the login button
-    Then I am taken to EGI AAI
+    Then I am taken to EGI Check-In IdP discovery page
     Then I choose SSO
     And I add my credentials
     Then I am asked to release my attributes

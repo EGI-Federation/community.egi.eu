@@ -1,5 +1,4 @@
 require 'watir'
-require 'watir-performance'
 require 'rspec/expectations'
 require 'cucumber/rspec/doubles'
 require 'json'
@@ -39,7 +38,7 @@ Given('I click on the login button') do
   @login_button.click
 end
 
-Then('I am taken to EGI AAI') do
+Then('I am taken to EGI Check-In IdP discovery page') do
   @browser.window(title: /identity provider/i).use
 end
 
