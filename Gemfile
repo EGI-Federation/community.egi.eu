@@ -9,6 +9,5 @@ group :test do
   gem 'rubocop'
   gem 'cucumber', '~> 3.1.0'
   gem 'watir'
+  gem "selenium-webdriver", "~> 3.14"
 end
-
-gem "selenium-webdriver", "~> 3.14"
