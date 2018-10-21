@@ -9,7 +9,8 @@ Feature: Log in with Check-In A person with an identity can log in with CheckIn
     Then it is present
 
   Scenario: A test user visits the forum to log in
-    Given I click on the login button
+    Given I visit the main page
+    When I click on the login button
     Then I am taken to EGI Check-In IdP discovery page
     Then I choose SSO
     And I add my credentials
