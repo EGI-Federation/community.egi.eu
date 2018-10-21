@@ -10,10 +10,10 @@ Given('I am a test user') do
   expect(@username).to be
   @password = ENV['USER_PASSWORD']
   expect(@password).to be
+  @browser = Watir::Browser.new :firefox
 end
 
 Given('I am on the main page') do
-  @browser = Watir::Browser.new :firefox
   @browser.goto 'https://community.egi.eu'
   # load_secs = @browser.performance.summary[:response_time] / 1000
   # expect(load_secs).to < 300
