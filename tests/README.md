@@ -6,6 +6,7 @@ Here are all the tests you need to test the thing !
         - [SSH Hardening](#ssh-hardening)
         - [NGINX Hardening](#nginx-hardening)
     - [Content](#content)
+    - [Behaviour](#behaviour)
 
 # Setting up
 
@@ -17,8 +18,9 @@ We break up the tests into a few profiles
 
     - security
         - ssh
-        -  nginx
+        - nginx
     - content
+    - behaviour
 
 ## Security
 
@@ -34,4 +36,8 @@ inspec exec -t ssh://<username>@<forum_hostname> https://github.com/dev-sec/ssh-
 
 ## Content
 
-We test the content by expecting a few predefined categories. See [content](content/)
+We test the content by expecting a few predefined categories. See [content](content/).
+
+## Behaviour
+
+We use cucumber to describe various desired features of the service. See [cucumber/README](cucumber/features/README.md) for more details.

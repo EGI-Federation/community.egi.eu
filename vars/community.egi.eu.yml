@@ -188,17 +188,56 @@ discourse_templates:
 
 discourse_plugins:
   - name: Discourse Data Explorer
-    description: Allows better querying of Discourse database
+    description: "Allows better querying of Discourse database"
     url: https://github.com/discourse/discourse-data-explorer.git
   - name: "Discourse Solved ✔"
     description: "Allows you to mark posts as solutions"
     url: https://github.com/discourse/discourse-solved.git
-  - name: Slack plugin
-    description: "Discourse to slack plugin"
-    url: https://github.com/bernd/discourse-slack-plugin.git
+  - name: Chat plugin
+    description: "Discourse to chat plugin"
+    url: https://github.com/discourse/discourse-chat-integration.git
   - name: Checklist
     description: "For when you need to render checklists"
-    url: https://github.com/cpradio/discourse-plugin-checklist
+    url: https://github.com/cpradio/discourse-plugin-checklist.git
   - name: OAuth2 provider
     description: "Enable OAuth2 identity provider configuration"
-    url: https://github.com/discourse/discourse-oauth2-basic
+    url: https://github.com/discourse/discourse-oauth2-basic.git
+  - name: Code Review
+    description: "Code Review with github"
+    url: https://github.com/discourse/discourse-code-review.git
+  - name: Spreadsheets
+    description: "Render google sheets in discourse"
+    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
+  - name: Footnotes
+    description: "Allow footnotes in posts"
+    url: https://github.com/discourse/discourse-footnote.git
+  - name: Events
+    description: "Topic event metadata"
+    url: https://github.com/angusmcleod/discourse-events.git
+  - name: Locations
+    description: "Topic location metadata"
+    url: https://github.com/angusmcleod/discourse-locations.git
+  - name: Retort
+    description: "Allow different kinds of reactions to topics"
+    url: https://github.com/gdpelican/retort.git
+  - name: Canned Responses
+    description: "Predefined responses to new topics"
+    url: https://github.com/discourse/discourse-canned-replies.git
+  - name: Assign
+    description: "Assign topics to specific people"
+    url: https://github.com/discourse/discourse-assign.git
+  - name: QnA
+    description: "Allow posts to be marked as solutions to questions"
+    url: https://github.com/angusmcleod/discourse-question-answer
+  - name: Graphviz
+    description: "Render directed graphs in posts"
+    url: https://github.com/discourse/discourse-graphviz
+  - name: CodeReview
+    description: "Perform code review with bi-directional GitHub integration"
+    url: https://github.com/discourse/discourse-code-review.git
+  - name: Online
+    description: "Show who is online"
+    url: https://github.com/davidtaylorhq/discourse-whos-online
+  - name: Cakeday
+    description: "Show birthdays and other anniversaries"
+    url: https://github.com/discourse/discourse-cakeday
