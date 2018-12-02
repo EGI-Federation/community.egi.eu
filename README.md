@@ -35,3 +35,7 @@ If all that is ok, run the playbook, or get your favourite CI tool to do it :
 
 The [tests](tests/README.md) directory contains the tests that we expect the service, server and machine to pass.
 They contain tests for the ssh connection, nginx server configuration and some content.
+
+## Authors
+
+See [the authors file](authors.yml)

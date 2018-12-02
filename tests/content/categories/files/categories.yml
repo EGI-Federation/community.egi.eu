@@ -1,6 +1,6 @@
 ---
-categories: 
-# These should also somehow reflect the hierarchy of the categories.
+categories:
+  # These should also somehow reflect the hierarchy of the categories.
   - name: 'AAI'
     slug: 'aai'
   - name: 'EGI Operations'
