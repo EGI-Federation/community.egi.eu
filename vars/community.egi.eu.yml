@@ -205,9 +205,6 @@ discourse_plugins:
   - name: Code Review
     description: "Code Review with github"
     url: https://github.com/discourse/discourse-code-review.git
-  - name: Spreadsheets
-    description: "Render google sheets in discourse"
-    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
   - name: Footnotes
     description: "Allow footnotes in posts"
     url: https://github.com/discourse/discourse-footnote.git
