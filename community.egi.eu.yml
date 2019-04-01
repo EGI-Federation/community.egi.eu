@@ -7,8 +7,9 @@
     - name: Configure remote access
       authorized_key:
         user: root
-        exclusive: true
-      with_file:
+        exclusive: false
+        key: "{{ item }}"
+      loop:
         - 'https://github.com/gwarf.keys'
         - 'https://github.com/enolfc.keys'
         - 'https://github.com/brucellino.keys'
