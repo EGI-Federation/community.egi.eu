@@ -42,4 +42,4 @@
   tags:
     - discourse
   roles:
-    - { role: AAROC.discourse-sso, launch: 'False'}
+    - {role: AAROC.discourse-sso, launch: 'False'}
