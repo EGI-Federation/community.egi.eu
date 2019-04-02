@@ -3,6 +3,16 @@
 - hosts: forum
   name: harden ssh
   become: true
+  tasks:
+    - name: Configure remote access
+      authorized_key:
+        user: root
+        exclusive: false
+        key: "{{ item }}"
+      loop:
+        - 'https://github.com/gwarf.keys'
+        - 'https://github.com/enolfc.keys'
+        - 'https://github.com/brucellino.keys'
   roles:
     - {role: dev-sec.ssh-hardening, tags: ssh}
 
@@ -42,4 +52,4 @@
   tags:
     - discourse
   roles:
-    - { role: AAROC.discourse-sso, launch: 'False'}
+    - {role: AAROC.discourse-sso, launch: 'False'}
