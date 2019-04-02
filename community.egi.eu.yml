@@ -7,7 +7,7 @@
     - name: Configure remote access
       authorized_key:
         user: root
-        exclusive: false
+        exclusive: true
         key: "{{ item }}"
       loop:
         - 'https://github.com/gwarf.keys'
