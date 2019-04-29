@@ -1,3 +1,4 @@
 *.key
 *.retry
 secrets.yml
+.python-version
