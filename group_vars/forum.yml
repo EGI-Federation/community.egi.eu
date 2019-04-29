@@ -200,6 +200,6 @@ discourse_plugins:
   - name: Chatroom integration
     description: "Updates to slack and post transcript to discourse"
     url: https://github.com/discourse/discourse-chat-integration.git
-  - name: Mailgin plugin for Discourse
+  - name: Mailgun plugin for Discourse
     description: Provides a simple endpoint for Mailgun to deliver inbound emails to Discourse
     url: https://github.com/halkeye/discourse-mailgun
