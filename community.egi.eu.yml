@@ -12,7 +12,6 @@
       loop:
         - 'https://github.com/gwarf.keys'
         - 'https://github.com/enolfc.keys'
-        - 'https://github.com/brucellino.keys'
   roles:
     - {role: dev-sec.ssh-hardening, tags: ssh}
 
