@@ -173,7 +173,7 @@ nginx_sites:
               }
 # Discourse stuff
 #discourse_hostname:
-developer_emails: 'brucellino@gmail.com'
+developer_emails: 'baptiste.grenier@egi.eu'
 smtp_address: smtp-relay.gmail.com
 # smtp username should be empty for the un-authenticated relay
 smtp_username: ""
