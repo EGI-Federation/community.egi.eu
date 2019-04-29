@@ -12,7 +12,7 @@ seeds_path = '../files/forum-data/categories/'
 forum_client = DiscourseApi::Client.new('https://community.egi.eu')
 secrets = YAML.load_file('../files/secrets.yml')
 forum_client.api_key = secrets['api_key']
-forum_client.api_username = 'brucellino'
+forum_client.api_username = secrets['api_username']
 # Create an array that will hold the parent category ids
 parent_categories = []
 
