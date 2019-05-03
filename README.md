@@ -22,9 +22,9 @@ The playbook uses a single role - [AAROC.discourse-sso](https://github.com/AAROC
 If you are the maintainer of the service, you need to run the playbook with the right variables.
 
   1. Ensure that you have the roles locally :
-    * `ansible-galaxy install AAROC.discourse-sso`
-    * `ansble-galaxy install dev-sec.ssh-hardening`
+    * `ansible-galaxy install -r requirements.yml`
   1. Ensure you have your vars set up in `vars/<forum_host_name>.yml`
+  1. Ensure you have your secret vars set up in `files/secrets.yml` (see `files/secrets.yml.sample`)
   1. Check the validity of the certificate and private keys in `files/etc/ssl`
   1. Check the `inventory`.
 
