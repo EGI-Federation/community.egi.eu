@@ -47,13 +47,26 @@ nginx_sites:
               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
               proxy_set_header X-Forwarded-Proto $scheme;
               }
+
 # Discourse stuff
 #discourse_hostname:
 developer_emails: 'baptiste.grenier@egi.eu'
-smtp_address: smtp-relay.gmail.com
+smtp_address: smtp.mailgun.org
 # smtp username should be empty for the un-authenticated relay
-smtp_username: ""
+smtp_username: postmaster@sandbox6c9929c31d284bdba0a154af210f7130.mailgun.org
 smtp_port: 587
+db_shared_buffer_size: 512
+unicorn_workers: 4
+discourse_hostname: community.egi.eu
+#  templates to use
+#  adding web.socketed to allow for multiple ngingx vhost
+discourse_templates:
+  - postgres
+  - redis
+  - web
+  - sshd
+  - web.ratelimited
+  - web.socketed
 discourse_plugins:
   - name: Discourse Data Explorer
     description: Allows better querying of Discourse database
