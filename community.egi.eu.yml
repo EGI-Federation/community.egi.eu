@@ -49,5 +49,7 @@
   become: true
   tags:
     - discourse
+  vars_files:
+    - files/secrets.yml
   roles:
     - {role: AAROC.discourse-sso, launch: 'False'}
