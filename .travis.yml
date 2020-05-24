@@ -5,11 +5,11 @@ python:
 before_install:
   - sudo apt-get install python-dev
   - sudo apt-get install ruby ruby-dev
-  - gem update --system
+  - yes | gem update --system --force
+  - gem install bundler
 install:
   # - pip install ansible
   - pip install yamllint
-  - gem install bundler
   - bundle
 before_script:
 script:
