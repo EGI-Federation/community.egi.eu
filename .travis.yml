@@ -1,4 +1,5 @@
 ---
+dist: bionic
 language: python
 python:
   - '3.6'
@@ -15,7 +16,7 @@ before_script:
 script:
   - find . -name "*.yml" -exec yamllint {} \;
   - cd tests/content
-  - inspec --chef-license=accept exec categories
+  - inspec exec categories
 after_success:
 after_failure:
 after_script:
