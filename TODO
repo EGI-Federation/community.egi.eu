@@ -1,0 +1,5 @@
+# To do
+
+- Test ports
+- Import old data
+- Avoid installing python modules using pip (cf [mongrelion.docker](https://github.com/mongrelion/ansible-role-docker)
