@@ -1,5 +1,5 @@
 ---
-# Add the EGI services here 
+# Add the EGI services here
 # See https://www.egi.eu/services/
 - name: "Cloud Container Compute"
   color: BF1E2E
@@ -55,7 +55,7 @@
     - name: "trust_level_0"
       permission_type: 1
   parent_category_id: 7
-  
+
 - name: "Data Transfer"
   description: |
     "Transfer large sets of data from one place to another"
