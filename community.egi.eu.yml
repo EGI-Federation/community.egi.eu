@@ -45,6 +45,19 @@
         msg: "TODO"
 
 - hosts: forum
+  name: Install required packages to build python modules
+  become: true
+  tasks:
+    - name: Install gcc
+      package:
+        name: gcc
+        state: present
+    - name: Install python-devel
+      package:
+        name: python-devel
+        state: present
+
+- hosts: forum
   name: Deploy !
   become: true
   tags:
