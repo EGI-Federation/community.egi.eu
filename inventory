@@ -1,2 +1,5 @@
 [forum]
-community.egi.eu ansible_user=root
+# Production server
+# community.egi.eu ansible_user=root ansible_host=78.128.216.35
+# New server
+community.egi.eu ansible_user=root ansible_host=78.128.211.218
