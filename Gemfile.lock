@@ -277,6 +277,8 @@ GEM
       train-aws (~> 0.1)
       train-habitat (~> 0.1)
       train-winrm (~> 0.2)
+    inspec-bin (4.18.114)
+      inspec (= 4.18.114)
     inspec-core (4.18.114)
       addressable (~> 2.4)
       chef-telemetry (~> 1.0)
@@ -548,7 +550,7 @@ DEPENDENCIES
   awesome_print
   cucumber (~> 3.1.0)
   discourse_api (~> 0.20.0)
-  inspec
+  inspec-bin
   json
   rspec
   rubocop

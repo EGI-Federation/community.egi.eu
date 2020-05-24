@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'awesome_print'
 gem 'discourse_api', '~> 0.20.0'
-gem 'inspec'
+gem 'inspec-bin'
 gem 'json'
 
 group :test do
