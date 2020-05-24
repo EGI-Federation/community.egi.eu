@@ -17,7 +17,7 @@
   text_color: FFFFF
   slug: egi-cloud
   description: |
-    "Cloud Compute gives you the ability to deploy and scale virtual machines on-demand."
+    "Cloud Compute: deploy and scale virtual machines on-demand."
   permissions:
     - name: "trust_level_0"
       permission_type: 1

@@ -25,7 +25,6 @@ nginx_sites:
   http:
     - listen      80 default
     - server_name community.egi.eu
-## redirect http to https ##
     - return      301 https://$server_name$request_uri
   https:
     - listen 443
@@ -123,5 +122,5 @@ discourse_plugins:
     url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
     # XXX not deployed?
   - name: Mailgun plugin for Discourse
-    description: Provides a simple endpoint for Mailgun to deliver inbound emails to Discourse
+    description: Provides a endpoint for Mailgun to deliver inbound emails
     url: https://github.com/halkeye/discourse-mailgun
