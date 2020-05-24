@@ -9,7 +9,7 @@ before_install:
 install:
   # - pip install ansible
   - pip install yamllint
-  - gem install bundler:1.16.3
+  - gem install bundler
   - bundle
 before_script:
 script:
