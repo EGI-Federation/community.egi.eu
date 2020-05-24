@@ -2,3 +2,6 @@
 *.retry
 secrets.yml
 .python-version
+.ruby-gemset
+.ruby-version
+.venv
