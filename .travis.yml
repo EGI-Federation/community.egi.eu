@@ -15,7 +15,7 @@ before_script:
 script:
   - find . -name "*.yml" -exec yamllint {} \;
   - cd tests/content
-  - inspec exec categories
+  - inspec --chef-license=accept exec categories
 after_success:
 after_failure:
 after_script:
