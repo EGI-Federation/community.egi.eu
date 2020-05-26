@@ -54,6 +54,7 @@
         permanent: yes
         state: enabled
 
+# XXX probably not required if not using pip to build python modules
 - hosts: forum
   name: Install required packages to build python modules
   become: true
@@ -67,6 +68,7 @@
         name: python-devel
         state: present
 
+# XXX probably not required
 - hosts: forum
   name: Install a kernel supporting more recent docker drivers
   become: true

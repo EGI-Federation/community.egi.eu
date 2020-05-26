@@ -11,6 +11,7 @@ elrepo_repository_kernel: true
 # to be confirmed if needed and to be installed using packages instead of pip
 docker_compose: false
 docker_version: "latest"
+# https://docs.docker.com/storage/storagedriver/select-storage-driver/
 # XXX overlay2 needs either ftype=1 for the XFS partition or using ext4
 # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.2_release_notes/technology-preview-file_systems
 # https://docs.docker.com/storage/storagedriver/device-mapper-driver/
