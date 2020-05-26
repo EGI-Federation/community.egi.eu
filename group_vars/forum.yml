@@ -1,5 +1,13 @@
 ---
-## SSH stuff
+# Kernel from ELrepo
+elrepo_kernel: true
+elrepo_enablerepo:
+   - epel
+elrepo_kernel_version: lt
+elrepo_repository_elrepo: true
+elrepo_repository_kernel: true
+
+# SSH configuration
 # For which components (client and server) to generate the configuration for.
 # Can be useful when running against a client without an SSH server.
 ssh_client_hardening: true

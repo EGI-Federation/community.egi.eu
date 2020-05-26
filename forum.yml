@@ -58,6 +58,13 @@
         state: present
 
 - hosts: forum
+  name: Install a kernel supporting more recent docker drivers
+  become: true
+  roles:
+    - linuxhq.epel
+    - linuxhq.elrepo
+
+- hosts: forum
   name: Deploy !
   become: true
   tags:
