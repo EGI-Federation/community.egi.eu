@@ -65,4 +65,4 @@
   vars_files:
     - files/secrets.yml
   roles:
-    - {role: AAROC.discourse-sso, launch: 'False'}
+    - {role: EGI-Foundation.discourse-sso, launch: 'False'}
