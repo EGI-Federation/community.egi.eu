@@ -16,6 +16,8 @@ docker_version: "latest"
 # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.2_release_notes/technology-preview-file_systems
 # https://docs.docker.com/storage/storagedriver/device-mapper-driver/
 # devicemapper can be used in production, but only with direct-lvm, not loop-lvm
+# XXX devicemapper not releasing free space from removed images
+# https://github.com/moby/moby/issues/3182
 docker_default_config:
   # storage-driver: overlay2
   storage-driver: devicemapper
@@ -139,10 +141,10 @@ discourse_plugins:
     description: "Discourse to slack plugin"
     url: https://github.com/bernd/discourse-slack-plugin.git
     # XXX not deployed?
-  - name: Spreadsheet
-    description: "Import google docs spreadsheets to preview them."
-    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
-    # XXX not deployed?
   - name: Mailgun plugin for Discourse
     description: Provides a endpoint for Mailgun to deliver inbound emails
     url: https://github.com/halkeye/discourse-mailgun
+# XXX not more existing
+#  - name: Spreadsheet
+#    description: "Import google docs spreadsheets to preview them."
+#    url: https://github.com/tcreativo/plugin_discourse_spreadsheet.git
