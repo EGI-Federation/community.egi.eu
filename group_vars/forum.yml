@@ -7,6 +7,14 @@ elrepo_kernel_version: lt
 elrepo_repository_elrepo: true
 elrepo_repository_kernel: true
 
+# Docker configuration
+# to be confirmed if needed and to be installed using packages instead of pip
+docker_compose: false
+docker_version: "latest"
+docker_default_config:
+  storage-driver: overlay
+  log-level: info
+
 # SSH configuration
 # For which components (client and server) to generate the configuration for.
 # Can be useful when running against a client without an SSH server.
@@ -26,7 +34,7 @@ ssh_print_motd: true
 # false to disable display of last login information
 ssh_print_last_log: true
 
-## NGINX stuff
+# NGINX configuration
 # Love https://mozilla.github.io/server-side-tls/ssl-config-generator/
 cert_location: /etc/ssl/certs/
 nginx_sites:
@@ -55,15 +63,15 @@ nginx_sites:
               proxy_set_header X-Forwarded-Proto $scheme;
               }
 
-# Discourse stuff
+# Discourse configuration
 developer_emails: 'baptiste.grenier@egi.eu'
 smtp_address: smtp.mailgun.org
 smtp_port: 587
 db_shared_buffer_size: 512
 unicorn_workers: 4
 discourse_hostname: community.egi.eu
-#  templates to use
-#  adding web.socketed to allow for multiple ngingx vhost
+# templates to use
+# adding web.socketed to allow for multiple ngingx vhost
 discourse_templates:
   - postgres
   - redis
