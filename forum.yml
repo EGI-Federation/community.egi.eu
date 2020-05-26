@@ -41,8 +41,18 @@
         group: root
         mode: "u=r"
     - name: sort out firewall
-      debug:
-        msg: "TODO"
+      firewalld:
+        service: https
+        permanent: yes
+        state: enabled
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+      firewalld:
+        service: ssh
+        permanent: yes
+        state: enabled
 
 - hosts: forum
   name: Install required packages to build python modules
