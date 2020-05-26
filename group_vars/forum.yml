@@ -12,7 +12,7 @@ elrepo_repository_kernel: true
 docker_compose: false
 docker_version: "latest"
 docker_default_config:
-  storage-driver: overlay
+  storage-driver: overlay2
   log-level: info
 
 # SSH configuration
