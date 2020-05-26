@@ -1,6 +1,8 @@
 ---
 # Ansible modules
 - name: EGI-Foundation.discourse-sso
+- name: linuxhq.epel
+- name: linuxhq.elrepo
 - name: dev-sec.ssh-hardening
 - name: andrewrothstein.tmux
 - name: zerodowntime.vim
