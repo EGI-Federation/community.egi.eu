@@ -68,7 +68,7 @@
         name: python-devel
         state: present
 
-# XXX probably not required
+# XXX probably not required, or at least only the kernel-ml not the built files
 - hosts: forum
   name: Install a kernel supporting more recent docker drivers
   become: true
